@@ -424,14 +424,13 @@ const SVC_ES = [
   ["Camiones Pesados y Remolque", "Escape para camiones de carga, diesel y vehículos de remolque. Trabajamos con los grandes.", "Llama por Precio"]
 ];
 
-let lang = localStorage.getItem('haslang') || 'en';
+let lang = localStorage.getItem('lang') || 'en';
 
 function applyLang(l) {
   lang = l;
-  localStorage.setItem('haslang', l);
+  localStorage.setItem('lang', l);
   const isES = l === 'es';
   document.getElementById('langToggle').textContent = isES ? '🇺🇸 English' : '🇲🇽 Español';
-  document.getElementById('hero-pill').textContent = isES ? 'Más de 30 Años de Experiencia' : '30+ Years of Expertise';
   document.getElementById('hero-h1').innerHTML = isES ? 'Nuestros <span>Servicios</span>' : 'Our <span>Services</span>';
   document.getElementById('hero-p').textContent = isES
     ? 'Más de 30 años de experiencia en escape y reparación automotriz en Vista, CA. Negocio familiar, precios honestos, servicio el mismo día.'
@@ -447,7 +446,6 @@ function applyLang(l) {
   document.getElementById('footer-tag').textContent = isES
     ? 'Taller familiar desde 1996. Servicio en Vista, Oceanside, San Marcos, Carlsbad, Escondido y todo el Norte del Condado de San Diego.'
     : 'Family owned & operated since 1996. Serving Vista, Oceanside, San Marcos, Carlsbad, Escondido & all of North County San Diego.';
-  document.getElementById('tb-book').textContent = isES ? 'Estimado Gratis' : 'Free Estimate';
   document.getElementById('mn-home').childNodes[0].textContent = isES ? 'Inicio' : 'Home';
   document.getElementById('mn-services').childNodes[0].textContent = isES ? 'Servicios' : 'Services';
   document.getElementById('mn-products').childNodes[0].textContent = isES ? 'Productos' : 'Products';
@@ -469,7 +467,11 @@ function applyLang(l) {
   const svcs = isES ? SVC_ES : SVC_EN;
   svcs.forEach(function(sv, i) {
     var n = i + 1;
-    document.getElementById('s' + n + '-name').textContent = sv[0];
+    var nameEl = document.getElementById('s' + n + '-name');
+    // Update only the text node, preserving the SVG icon child
+    for (var j = nameEl.childNodes.length - 1; j >= 0; j--) {
+      if (nameEl.childNodes[j].nodeType === 3) { nameEl.childNodes[j].textContent = sv[0]; break; }
+    }
     document.getElementById('s' + n + '-desc').textContent = sv[1];
     document.getElementById('s' + n + '-btn').textContent = sv[2];
   });
