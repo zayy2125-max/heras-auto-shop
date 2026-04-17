@@ -185,6 +185,10 @@ img.img-loaded{opacity:1}
 .svc-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,11,0.85) 0%,rgba(10,10,11,0.2) 60%,transparent 100%);display:flex;align-items:flex-end;padding:1.25rem 1.5rem}
 .svc-hero-overlay span{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:800;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.7)}
 @media(min-width:1024px){.svc-hero-img{height:420px}}
+@media(max-width:767px){
+  .svc-hero-img{height:auto;max-height:300px}
+  .svc-hero-photo{height:auto;max-height:300px;object-fit:contain;object-position:center center}
+}
 
 /* iOS STICKY BAR FIX - guaranteed approach */
 html, body {
