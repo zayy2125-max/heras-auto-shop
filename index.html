@@ -145,6 +145,12 @@ section{padding:2.5rem 1.25rem}
 .trust-icon{display:none}
 .trust-title{font-family:var(--fh);font-size:1.5rem;font-weight:900;text-transform:uppercase;color:var(--white);letter-spacing:0.02em;min-width:120px;flex-shrink:0;line-height:1}
 .trust-desc{font-size:0.87rem;color:var(--silver);line-height:1.68}
+.trust-cta{margin-top:2.5rem;display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
+.trust-cta-text{font-size:1.05rem;color:var(--silver);line-height:1.6;margin:0}
+.btn-red{display:inline-flex;align-items:center;gap:0.5rem;background:var(--red);color:var(--white);font-family:var(--fh);font-size:0.9rem;font-weight:800;text-transform:uppercase;text-decoration:none;padding:0.9rem 1.75rem;border:none;cursor:pointer;transition:background 0.15s}
+.btn-red::after{content:'→';font-weight:400}
+.btn-red:active{background:var(--red-dark)}
+@media(hover:hover){.btn-red:hover{background:var(--red-dark)}}
 
 #cities{background:var(--dark2)}
 .cities-desc{font-size:0.92rem;color:var(--silver);line-height:1.8;margin-bottom:2rem}
@@ -476,6 +482,10 @@ html, body {
     <div class="trust-card"><div class="trust-title">All Makes</div><div class="trust-desc">Domestic, import, diesel, RVs — we work on everything.</div></div>
     <div class="trust-card"><div class="trust-title">Top Rated</div><div class="trust-desc">4.4★ on Google. Hundreds of happy customers.</div></div>
     <div class="trust-card"><div class="trust-title">No Pressure</div><div class="trust-desc">We tell you what you need. You decide. Simple.</div></div>
+  </div>
+  <div class="trust-cta">
+    <p class="trust-cta-text">Come see why Vista trusts us.</p>
+    <a href="#reviews" class="btn-red">SEE OUR REVIEWS</a>
   </div>
 </section>
 
