@@ -117,10 +117,12 @@ footer{background:#090909;padding:3rem 1.25rem;padding-bottom:calc(3rem + var(--
 .page-header p{font-size:0.92rem;color:var(--silver);line-height:1.78;max-width:380px}
 
 .services-section{padding:3rem 1.25rem 5rem;background:var(--dark)}
-.svc-cards{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--steel)}
-.svc-card{background:transparent;border:none;border-radius:0;padding:1.75rem 0;border-bottom:1px solid var(--steel);position:relative}
-.svc-card::before{display:none}
-.svc-card-top{display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1rem}
+.svc-cards{display:flex;flex-direction:column;gap:0.75rem}
+.svc-card{display:block;background:#1a1a1a;border:none;border-left:3px solid var(--red);border-radius:4px;padding:24px;position:relative;text-decoration:none;cursor:pointer;transition:background 0.2s}
+.svc-card:hover{background:#222}
+.svc-card::after{content:'→';position:absolute;right:1.25rem;top:50%;transform:translateY(-50%);color:var(--red);font-size:1.1rem;opacity:0;transition:opacity 0.2s}
+.svc-card:hover::after{opacity:1}
+.svc-card-top{display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:0}
 .svc-icon{display:none}
 .svc-num{font-family:var(--fh);font-size:0.68rem;font-weight:700;color:var(--red);letter-spacing:0.1em;min-width:2.5rem;padding-top:0.3rem;flex-shrink:0}
 .svc-info{flex:1;min-width:0}
@@ -145,9 +147,7 @@ footer{background:#090909;padding:3rem 1.25rem;padding-bottom:calc(3rem + var(--
 @media(min-width:1024px){
   .page-header{padding:8rem 5rem 5rem}
   .services-section{padding:5rem 5rem 8rem}
-  .svc-cards{display:grid;grid-template-columns:1fr 1fr;gap:0}
-  .svc-card:nth-child(odd){border-right:1px solid var(--steel);padding-right:3rem}
-  .svc-card:nth-child(even){padding-left:3rem}
+  .svc-cards{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
   .cta-banner{padding:7rem 5rem}
   .cta-banner-btns{flex-direction:row}
 }
@@ -287,7 +287,7 @@ html, body {
   <span class="sec-label" id="sec-label">What We Do</span>
   <h2 class="sec-title" id="sec-title">Full-Service <span>Auto Repair</span></h2>
   <div class="svc-cards">
-    <div class="svc-card">
+    <a href="contact.html" class="svc-card">
       <div class="svc-card-top">
       <div class="svc-num">01</div>
         <div class="svc-info">
@@ -295,9 +295,8 @@ html, body {
           <div class="svc-desc" id="s1-desc">Stock and custom muffler replacement for all makes and models. In and out same day — no appointment needed.</div>
         </div>
       </div>
-      <a href="tel:+17606395216" class="svc-btn" id="s1-btn">Call for Pricing</a>
-    </div>
-    <div class="svc-card">
+    </a>
+    <a href="contact.html" class="svc-card">
       <div class="svc-card-top">
       <div class="svc-num">02</div>
         <div class="svc-info">
@@ -305,9 +304,8 @@ html, body {
           <div class="svc-desc" id="s2-desc">Pads, rotors, drums, calipers and hydraulics. Full brake inspection included with every service.</div>
         </div>
       </div>
-      <a href="tel:+17606395216" class="svc-btn" id="s2-btn">Call for Pricing</a>
-    </div>
-    <div class="svc-card">
+    </a>
+    <a href="contact.html" class="svc-card">
       <div class="svc-card-top">
       <div class="svc-num">03</div>
         <div class="svc-info">
@@ -315,9 +313,8 @@ html, body {
           <div class="svc-desc" id="s3-desc">Custom fabricated exhaust systems built in-house. Performance and show quality work — designed to your specs.</div>
         </div>
       </div>
-      <a href="tel:+17606395216" class="svc-btn" id="s3-btn">Call for Pricing</a>
-    </div>
-    <div class="svc-card">
+    </a>
+    <a href="contact.html" class="svc-card">
       <div class="svc-card-top">
       <div class="svc-num">04</div>
         <div class="svc-info">
@@ -325,9 +322,8 @@ html, body {
           <div class="svc-desc" id="s4-desc">Wheel alignment, tie rods, ball joints, steering and suspension work. Drive straight and handle safely.</div>
         </div>
       </div>
-      <a href="tel:+17606395216" class="svc-btn" id="s4-btn">Call for Pricing</a>
-    </div>
-    <div class="svc-card">
+    </a>
+    <a href="contact.html" class="svc-card">
       <div class="svc-card-top">
       <div class="svc-num">05</div>
         <div class="svc-info">
@@ -335,9 +331,8 @@ html, body {
           <div class="svc-desc" id="s5-desc">Full exhaust system diagnosis, repair and replacement from manifold to tip. We do it all under one roof.</div>
         </div>
       </div>
-      <a href="tel:+17606395216" class="svc-btn" id="s5-btn">Call for Pricing</a>
-    </div>
-    <div class="svc-card">
+    </a>
+    <a href="contact.html" class="svc-card">
       <div class="svc-card-top">
       <div class="svc-num">06</div>
         <div class="svc-info">
@@ -345,9 +340,8 @@ html, body {
           <div class="svc-desc" id="s6-desc">Check engine light diagnosis, catalytic converter repair and replacement, and emissions work done right.</div>
         </div>
       </div>
-      <a href="tel:+17606395216" class="svc-btn" id="s6-btn">Call for Pricing</a>
-    </div>
-    <div class="svc-card">
+    </a>
+    <a href="contact.html" class="svc-card">
       <div class="svc-card-top">
       <div class="svc-num">07</div>
         <div class="svc-info">
@@ -355,9 +349,8 @@ html, body {
           <div class="svc-desc" id="s7-desc">Professional exhaust welding for cars, trucks, RVs and motorcycles. All metals — precision work every time.</div>
         </div>
       </div>
-      <a href="tel:+17606395216" class="svc-btn" id="s7-btn">Call for Pricing</a>
-    </div>
-    <div class="svc-card">
+    </a>
+    <a href="contact.html" class="svc-card">
       <div class="svc-card-top">
       <div class="svc-num">08</div>
         <div class="svc-info">
@@ -365,8 +358,7 @@ html, body {
           <div class="svc-desc" id="s8-desc">Heavy duty truck exhaust, diesel work, and towing vehicle exhaust systems. We handle the big rigs too.</div>
         </div>
       </div>
-      <a href="tel:+17606395216" class="svc-btn" id="s8-btn">Call for Pricing</a>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -477,7 +469,6 @@ function applyLang(l) {
       if (nameEl.childNodes[j].nodeType === 3) { nameEl.childNodes[j].textContent = sv[0]; break; }
     }
     document.getElementById('s' + n + '-desc').textContent = sv[1];
-    document.getElementById('s' + n + '-btn').textContent = sv[2];
   });
   document.getElementById('opt-en').classList.toggle('selected', l === 'en');
   document.getElementById('opt-es').classList.toggle('selected', l === 'es');
