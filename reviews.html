@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="theme-color" content="#0E0E0F"/>
+<title>Customer Reviews – Heras Auto Shop | Vista, CA</title>
+<meta name="description" content="Real customer reviews for Heras Auto Shop in Vista, CA. See what our customers say about our exhaust, muffler, brake and auto repair work."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--red:#D42B2B;--red-dark:#b31f1f;--dark:#0E0E0F;--dark2:#161618;--dark3:#1e1e21;--steel:#3a3a40;--silver:#b0b0bc;--light:#f0f0f2;--white:#fff;--fh:'Barlow Condensed',sans-serif;--fb:'Barlow',sans-serif;--safe-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--dark);color:var(--light);font-family:var(--fb);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.red{color:var(--red)}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:199;background:rgba(14,14,15,0.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 1.25rem;height:90px;border-bottom:2px solid var(--red)}
+.nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
+.nav-logo img{width:68px;height:68px;object-fit:contain;border-radius:0;border:none;opacity:1}
+.nav-logo-text{font-family:var(--fh);font-size:1.4rem;font-weight:900;color:var(--white);text-transform:uppercase;letter-spacing:0.05em;line-height:1}
+.nav-logo-text span{color:var(--red)}
+.nav-logo-sub{font-size:0.72rem;color:var(--silver);letter-spacing:0.09em;text-transform:uppercase}
+.nav-right{display:flex;align-items:center;gap:0.5rem}
+.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:var(--dark);z-index:198;padding:2rem 1.5rem;overflow-y:auto}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:flex;align-items:center;justify-content:space-between;font-family:var(--fh);font-size:2.2rem;font-weight:900;text-transform:uppercase;color:var(--white);letter-spacing:0.02em;padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.mobile-menu a::after{content:'—';color:var(--red);font-size:0.9rem;font-weight:400;flex-shrink:0}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a.active{color:var(--red)}
+.menu-hablamos{font-family:var(--fh);font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);margin-top:2rem}
+
+body{padding-top:90px}
+section{padding:3rem 1.25rem 5rem}
+
+.page-header{padding:2.5rem 1.25rem 2rem;background:var(--dark2);position:relative;overflow:hidden;border-bottom:1px solid var(--steel)}
+.page-header::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red)}
+.page-header h1{font-family:var(--fh);font-size:clamp(3rem,12vw,7rem);font-weight:900;text-transform:uppercase;color:var(--white);line-height:0.88;letter-spacing:-0.02em;margin-bottom:1rem;padding-left:1rem;border-left:3px solid var(--red)}
+.page-header h1 span{color:var(--red)}
+.page-header p{font-size:0.92rem;color:var(--silver);line-height:1.78;max-width:380px}
+
+.rating-row{display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.rating-big{font-family:var(--fh);font-size:3rem;font-weight:900;color:var(--white);line-height:1}
+.rating-stars{color:#f5c242;font-size:0.9rem;letter-spacing:3px;margin:0.25rem 0}
+.rating-label{font-size:0.65rem;color:var(--silver);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.2rem}
+
+.reviews-list{border-top:1px solid var(--steel)}
+.review-card{border-bottom:1px solid var(--steel);padding:2rem 0}
+.review-stars{color:#f5c242;font-size:0.85rem;letter-spacing:3px;margin-bottom:1rem}
+.review-text{font-size:1rem;color:var(--light);line-height:1.82;font-style:italic;margin-bottom:1.25rem;font-weight:300;padding-left:1rem;border-left:2px solid var(--red)}
+.review-author{display:flex;align-items:center;gap:0.75rem}
+.review-av{width:34px;height:34px;border-radius:0;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:0.9rem;font-weight:900;color:var(--white);flex-shrink:0}
+.review-name{font-family:var(--fh);font-size:0.88rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--white)}
+.review-date{font-size:0.68rem;color:var(--silver);margin-top:0.15rem}
+.review-badge{display:inline-block;font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.15rem 0.45rem;border-radius:2px;vertical-align:middle;line-height:1.4;margin-left:0.2rem}
+.review-badge--google{background:#34A853;color:#fff}
+.review-badge--yelp{background:#D32323;color:#fff}
+
+.cta-banner{background:var(--dark2);border-top:1px solid var(--steel);padding:3rem 1.25rem;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red)}
+.cta-banner h2{font-family:var(--fh);font-size:clamp(2.4rem,9vw,5rem);font-weight:900;text-transform:uppercase;color:var(--white);line-height:0.9;margin-bottom:1rem;letter-spacing:-0.01em}
+.cta-banner p{color:var(--silver);margin-bottom:2rem;font-size:0.92rem;line-height:1.78;max-width:380px}
+.cta-banner-btns{display:flex;flex-direction:column;gap:0.75rem}
+.btn-red{display:inline-flex;align-items:center;justify-content:space-between;background:var(--red);color:var(--white);font-family:var(--fh);font-size:0.95rem;font-weight:800;letter-spacing:0.13em;text-transform:uppercase;padding:1.1rem 1.5rem;min-height:54px;border:none;cursor:pointer;transition:background 0.15s}
+.btn-red::after{content:'→';font-weight:400;flex-shrink:0}
+.btn-red:active{background:var(--red-dark)}
+.btn-outline-white{display:flex;align-items:center;justify-content:space-between;background:transparent;color:var(--white);font-family:var(--fh);font-size:0.95rem;font-weight:800;letter-spacing:0.13em;text-transform:uppercase;padding:1.1rem 1.5rem;border:1px solid var(--steel);min-height:54px}
+.btn-outline-white::after{content:'→';color:var(--red);flex-shrink:0}
+.btn-outline-white:active{border-color:var(--red);color:var(--white)}
+
+footer{padding:3rem 1.25rem;padding-bottom:calc(3rem + var(--safe-bottom) + 70px);background:var(--dark2);border-top:1px solid var(--steel)}
+.footer-logo{display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem}
+.footer-logo-text{font-family:var(--fh);font-size:1.1rem;font-weight:900;color:var(--white);text-transform:uppercase;letter-spacing:0.05em}
+.footer-logo-text span{color:var(--red)}
+.footer-tagline{font-size:0.82rem;color:var(--silver);line-height:1.82;margin-bottom:1.5rem;max-width:420px}
+.footer-links{display:flex;flex-wrap:wrap;gap:0.35rem 1.5rem;margin-bottom:1.5rem}
+.footer-links a{font-size:0.72rem;color:var(--silver);letter-spacing:0.06em;text-transform:uppercase}
+.footer-copy{font-size:0.67rem;color:var(--steel);line-height:1.8}
+
+.sticky-bottom{position:fixed;bottom:0;left:0;right:0;z-index:199;background:var(--dark2);border-top:2px solid var(--red);display:flex;padding-bottom:var(--safe-bottom)}
+.sticky-bottom a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0.85rem 0.5rem;font-family:var(--fh);font-size:0.62rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--silver);border-right:1px solid var(--steel)}
+.sticky-bottom a:last-child{border-right:none}
+.sticky-bottom a.primary{background:var(--red);color:var(--white)}
+.sticky-bottom a:active{background:var(--dark3)}
+.sticky-bottom a.primary:active{background:var(--red-dark)}
+
+@media(min-width:1024px){
+  nav{padding:0 3rem}
+  .nav-links{display:flex;align-items:center;gap:2rem}
+  .nav-links a{font-family:var(--fh);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.11em;color:var(--silver);transition:color 0.2s}
+  .nav-links a:hover{color:var(--white)}
+  .nav-links a.active{color:var(--white);border-bottom:2px solid var(--red);padding-bottom:2px}
+  .hamburger{display:none}
+  body{padding-top:90px}
+  .page-header{padding:8rem 5rem 5rem}
+  section{padding:7rem 5rem}
+  .cta-banner{padding:7rem 5rem}
+  .cta-banner-btns{flex-direction:row}
+  footer{padding:5rem 5rem;padding-bottom:calc(5rem + var(--safe-bottom) + 70px)}
+  .footer-links{gap:0.5rem 2.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="mascot.png" alt="Heras Auto Shop logo"/>
+    <div>
+      <div class="nav-logo-text">Heras <span>Auto</span> Shop</div>
+      <div class="nav-logo-sub">Vista, CA · Est. 1996</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html" class="active">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="products.html" onclick="closeMenu()">Products</a>
+  <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+  <a href="reviews.html" onclick="closeMenu()" class="active">Reviews</a>
+  <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+  <div class="menu-hablamos">Hablamos Español</div>
+</div>
+
+<div class="page-header">
+  <h1>Customer <span>Reviews</span></h1>
+  <p>Real feedback from real Vista-area customers. We let our work speak for itself.</p>
+</div>
+
+<section>
+  <div class="rating-row">
+    <div>
+      <div class="rating-big">4.4</div>
+      <div class="rating-stars">★★★★★</div>
+      <div class="rating-label">38+ Google Reviews</div>
+    </div>
+    <div style="border-left:1px solid var(--steel);padding-left:1.5rem">
+      <div class="rating-big">60+</div>
+      <div class="rating-label" style="margin-top:0.4rem">Total Reviews</div>
+      <div class="rating-label">All Platforms</div>
+    </div>
+  </div>
+
+  <div class="reviews-list">
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Came in to get a valvetronic exhaust installed on my 2017 BMW 230i. I was nervous no shop could do it — but I left very satisfied. They took their time and did excellent work. Very reasonably priced."</p>
+      <div class="review-author">
+        <div class="review-av">R</div>
+        <div>
+          <div class="review-name">Ricardo A.</div>
+          <div class="review-date">Oceanside, CA · <span class="review-badge review-badge--google">Google</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"So happy we found them! Amazing service across the board. Will definitely be recommending friends and family."</p>
+      <div class="review-author">
+        <div class="review-av">S</div>
+        <div>
+          <div class="review-name">Sandra T.</div>
+          <div class="review-date">Vista, CA · <span class="review-badge review-badge--google">Google</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Garfield is a brilliant mechanic who is willing to search for discounts on parts while charging reasonably priced labor. Undercuts all other auto shops. Excellent customer service..."</p>
+      <div class="review-author">
+        <div class="review-av">A</div>
+        <div>
+          <div class="review-name">Amanda M.</div>
+          <div class="review-date">Dec 2025 · <span class="review-badge review-badge--yelp">Yelp</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"This place is phenomenal. I called in late in the afternoon, Garfield explains to me. 'If you want it done today, we will get it done today' — they are extremely professional..."</p>
+      <div class="review-author">
+        <div class="review-av">J</div>
+        <div>
+          <div class="review-name">Jon Mike E.</div>
+          <div class="review-date">Oct 2024 · <span class="review-badge review-badge--yelp">Yelp</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Family owned business.. Job was done very well At a very Affordable price Very happy with this Exhaust System.. Thanks again"</p>
+      <div class="review-author">
+        <div class="review-av">M</div>
+        <div>
+          <div class="review-name">Matt M.</div>
+          <div class="review-date">Feb 2021 · <span class="review-badge review-badge--yelp">Yelp</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Muy buen trabajo, un delete de mofles en mi Camaro! En una hora ya estaba listo y el sonido al gusto, precio justo!"</p>
+      <div class="review-author">
+        <div class="review-av">R</div>
+        <div>
+          <div class="review-name">Roberto D.</div>
+          <div class="review-date">Nov 2025 · <span class="review-badge review-badge--yelp">Yelp</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Excelente servicio, buena atención al cliente muy amable el señor Garfield sin duda alguna lo recomiendo al 100%"</p>
+      <div class="review-author">
+        <div class="review-av">C</div>
+        <div>
+          <div class="review-name">Cesar B.</div>
+          <div class="review-date">Oct 2023 · <span class="review-badge review-badge--yelp">Yelp</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Ready to <span style="color:var(--red)">Experience It?</span></h2>
+  <p>No appointment needed. Free estimates. Walk in any time Mon–Sat.</p>
+  <div class="cta-banner-btns">
+    <a href="tel:+17606395216" class="btn-red">Call (760) 639-5216</a>
+    <a href="index.html#contact" class="btn-outline-white">Get Directions</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <img src="mascot.png" alt="Heras Auto Shop" style="width:32px;height:32px;object-fit:contain"/>
+    <div class="footer-logo-text">Heras <span>Auto</span> Shop</div>
+  </div>
+  <p class="footer-tagline">Family owned &amp; operated since 1996. Serving Vista, Oceanside, San Marcos, Carlsbad, Escondido &amp; all of North County San Diego.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="tel:+17606395216">(760) 639-5216</a>
+  </div>
+  <div class="footer-copy">538 Olive Ave, Ste A102, Vista, CA 92083<br>Mon–Fri 8AM–7PM · Sat 9AM–4PM · Sun Closed<br>© 2026 Heras Auto Shop</div>
+</footer>
+
+<div class="sticky-bottom">
+  <a href="tel:+17606395216">Call</a>
+  <a href="sms:+17606395216">Text</a>
+  <a href="reviews.html" class="primary">Reviews</a>
+  <a href="https://maps.google.com/?q=538+Olive+Ave+Vista+CA" target="_blank">Directions</a>
+</div>
+
+<script>
+var hbg = document.getElementById('hamburger');
+var menu = document.getElementById('mobileMenu');
+hbg.addEventListener('click', function() { hbg.classList.toggle('open'); menu.classList.toggle('open'); });
+function closeMenu() { hbg.classList.remove('open'); menu.classList.remove('open'); }
+</script>
+</body>
+</html>
